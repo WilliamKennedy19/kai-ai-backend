@@ -18,29 +18,50 @@
 
 ```plaintext
 backend/
-├── app/                     # Contains the main application code
-│   ├── Api/                 # Contains the API router for handling requests
-│   │   └── router.py        # Endpoints for FastAPI to test features and handle incoming requests
-│   ├── chats/               # Handles chat functionalities
-│   ├── Features/            # Contains feature-specific modules
-│   │   ├── Feature1/
+├── app/                        # Contains the main application code
+│   ├── Api/                    # Contains the API router for handling requests
+│   │   ├── tests/
+│   │   │    ├── __init__.py
+│   │   │    ├── linear_regression.pdf
+│   │   │    ├── test_tool_utility.py
+│   │   │    ├── test_tools.py
+│   │   │    └── test.pdf
+│   │   ├── __init__.py 
+│   │   ├── error_utilities.py
+│   │   ├── router.py           # Endpoints for FastAPI to test features and handle incoming requests
+│   │   ├── tool_utilities.py
+│   │   └── tools_config.json              
+│   ├── Features/               # Contains feature-specific modules
+│   │   ├── dynamo/
 │   │   │   ├── core.py
 │   │   │   ├── tools.py
 │   │   │   ├── Prompt/
 │   │   │   └── metadata.json
-│   │   ├── Feature2/
+│   │   ├── Kaichat/
 │   │   │   ├── core.py
 │   │   │   ├── tools.py
 │   │   │   ├── Prompt/
-│   │   │   └── metadata.json
-│   ├── services/            # Contains service modules
-│   ├── utils/               # Contains utility modules
-│   ├── app.yaml             # Application configuration file
-│   ├── Dependencies.py      # Dependency management
-│   ├── Main.py              # Main entry point for the application
-│   └── requirements.txt     # Python dependencies
-├── Dockerfile               # Dockerfile for containerizing the application
-└── README.md                # Documentation file
+│   │   │   └── kai_prompt.py
+│   │   ├── quizzify/
+│   │   │   ├── prompt/
+│   │   │   ├── tests/
+│   │   │   ├── CNN.pdf
+│   │   │   ├── core.py
+│   │   │   ├── metadata.json
+│   │   │   ├── tools.py
+│   ├── services/               # Contains service modules
+│   ├── utils/                  # Contains utility modules
+│   ├── .env.sample             # Sample document environment document for connecting to Gemini API
+│   ├── main.py                 # Main entry point for the application         
+├── app.yaml                    # Application configuration file
+├── contribution.md             # Description on how to contribute
+├── diagram.png                 # System layout
+├── Dockerfile                  # Dockerfile for containerizing the application
+├── LICENSE                     # Licensing information
+├── load_env.sh
+├── local-start.sh
+├── README.md                   # Documentation file
+└──requirements.txt             # Python dependencies
 ```
 
 ## Install all the necessary libraries:
