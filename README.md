@@ -18,6 +18,9 @@
 
 ```plaintext
 backend/
+├── github/
+│   ├── workflows
+│   │   ├── main.yml
 ├── app/                        # Contains the main application code
 │   ├── Api/                    # Contains the API router for handling requests
 │   │   ├── tests/
@@ -69,7 +72,7 @@ backend/
 ### Navigate to the app directory
 
 ```bash
-cd backend/app
+cd kai-ai-backend
 ```
 
 ### Create and activate Virtual Environment
@@ -108,7 +111,7 @@ pip install -r requirements.txt
 ### Step 4: Create a new .env and store the API Key
 
 1. Create a new file called `.env` in the root of the project.
-2. Copy the contents of the `.env.example` file into the `.env` file.
+2. Copy the contents of the `app/.env.sample` file into the `.env` file.
 3. Replace the placeholder values with your API key and project ID.
 4. Set the `ENV_TYPE` variable to `dev`.
 
@@ -143,7 +146,7 @@ Navigate to the project's root directory and build the Docker image. Typically, 
 docker build -t <image_name> .
 ```
 
-### 3 Run the Docker Container
+### 2 Run the Docker Container
 
 Run the Docker container using the following command:
 
